@@ -152,7 +152,7 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
 #rock-paper:checked ~ div h4::before,
 #paper-scissors:checked ~ div h4::before,
 #scissors-rock:checked ~ div h4::before {
-  content: "You Win!"
+  content: "You Win! :)"
 }
 #rock-scissors:checked ~ div h4::before,
 #paper-rock:checked ~ div h4::before,
