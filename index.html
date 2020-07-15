@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Rock-Paper-Scissors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body>
+<form>
+
+  <input type="radio" id="rock-rock" name="rock-paper-scissors">
+  <input type="radio" id="rock-paper" name="rock-paper-scissors">
+  <input type="radio" id="rock-scissors" name="rock-paper-scissors">
+  <input type="radio" id="paper-rock" name="rock-paper-scissors">
+  <input type="radio" id="paper-paper" name="rock-paper-scissors">
+  <input type="radio" id="paper-scissors" name="rock-paper-scissors">
+  <input type="radio" id="scissors-rock" name="rock-paper-scissors">
+  <input type="radio" id="scissors-paper" name="rock-paper-scissors">
+  <input type="radio" id="scissors-scissors" name="rock-paper-scissors">
+
+  <div>
+    <h3>Rock-Paper-Scissors</h3>
+    <div id="hands">
+      <div class="hand" id="computer-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
+      </div>
+
+      <div class="hand" id="user-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
+      </div> 
+    </div>
+  </div>
+ 
+  <div id="icons" >
+    <div>
+      <label for="rock-rock"><img src="images/rock.png" alt="rock"></label>
+      <label for="paper-rock"><img src="images/rock.png" alt="rock"></label>
+      <label for="scissors-rock"><img src="images/rock.png" alt="rock"></label>
+    </div>
+    <div>
+      <label for="rock-scissors"><img src="images/scissors.png" alt="scissors"></label>
+      <label for="paper-scissors"><img src="images/scissors.png" alt="scissors"></label>
+      <label for="scissors-scissors"><img src="images/scissors.png" alt="scissors"></label>
+    </div>
+    <div>
+      <label for="rock-paper"><img src="images/paper.png" alt="paper"></label>
+      <label for="paper-paper"><img src="images/paper.png" alt="paper"></label>
+      <label for="scissors-paper"><img src="images/paper.png" alt="paper"></label>
+    </div>
+  </div>
+  
+  <div id="message">
+    <h4></h4>
+    <div></div>
+    <input type="reset" value="Another Round" />
+  </div>
+
+</form>
+
+</html>
