@@ -197,7 +197,7 @@ input:checked ~ div h3{
   animation-name:gameover;
   animation-timing-function:linear;
   animation-duration:1s;
-  animation-fill-mode: both;
+  animation-fill-mode: both; 
   z-index:11;
   background-repeat:no-repeat;
   opacity:0;
