@@ -144,29 +144,55 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
   border-radius: 0 20px 20px 0;
 }
 
-#rock-rock:checked ~ div h4::before,
-#paper-paper:checked ~ div h4::before,
-#scissors-scissors:checked ~ div h4::before {
-  content: "You Tied!"
+#rock-rock:checked ~ div #gameover,
+#paper-paper:checked ~ div #gameover,
+#scissors-scissors:checked ~ div #gameover {
+  background-image: url(../images/tied.png);
 }
-#rock-paper:checked ~ div h4::before,
-#paper-scissors:checked ~ div h4::before,
-#scissors-rock:checked ~ div h4::before {
-  content: "You Win!"
+#rock-paper:checked ~ div #gameover,
+#paper-scissors:checked ~ div #gameover,
+#scissors-rock:checked ~ div #gameover {
+  background-image: url(../images/win.png);
 }
-#rock-scissors:checked ~ div h4::before,
-#paper-rock:checked ~ div h4::before,
-#scissors-paper:checked ~ div h4::before {
-  content: "opponent Wins!"
+#rock-scissors:checked ~ div #gameover,
+#paper-rock:checked ~ div #gameover,
+#scissors-paper:checked ~ div #gameover{
+  background-image: url(../images/lose.png);
 }
 
 #message {
-  text-align: center;
   display: none;
 }
 
 input:checked ~ #message {
   display: block;
+}
+input:checked ~ #icons img {
+  display: none;
+}
+input:checked ~ div h3{
+  display: none;
+}
+#gameover{
+  position: absolute;
+  top:0;
+  left:0;
+  width:0px;
+  height:0px;
+  background:rgba(0,0,0,0.5);
+  background-position:center 15%;
+  animation-name:gameover;
+  animation-timing-function:linear;
+  animation-duration:1s;
+  animation-fill-mode: both; 
+  z-index:11;
+  background-repeat:no-repeat;
+  opacity:0;
+}
+
+@-webkit-keyframes gameover{
+  0% {top:-1000px;opacity:0;width:100%;height:100%;}
+  100% {top:0px;opacity:1;width:100%;height:100%;}
 }
 
 #hands {
@@ -228,10 +254,13 @@ label:nth-of-type(2) { animation-delay: -0.15s; }
 label:nth-of-type(3) { animation-delay: -0.30s; }
 
 input[type="reset"] {
+  position: relative;
+  bottom: 40px;
   background-color: rgb(145, 214, 226);
   padding: .7em;
   margin-top: 2em;
   border-radius: .5em;
   font-weight: bold;
   font-family: 'Cinzel Decorative', cursive;
+  z-index: 12;
 }
