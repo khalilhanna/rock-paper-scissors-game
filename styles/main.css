@@ -181,10 +181,10 @@ input:checked ~ div h3{
   height:0px;
   background:rgba(0,0,0,0.5);
   background-position:center 15%;
-  -webkit-animation-name:gameover;
-  -webkit-animation-timing-function:linear;
-  -webkit-animation-duration:1s;
-  -webkit-animation-fill-mode: both; 
+  animation-name:gameover;
+  animation-timing-function:linear;
+  animation-duration:1s;
+  animation-fill-mode: both; 
   z-index:11;
   background-repeat:no-repeat;
   opacity:0;
