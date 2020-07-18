@@ -45,6 +45,7 @@ input:checked ~ div .hand {
   animation: none !important;
 }
 
+/* Hands position and animation */
 .hand {
   margin: 20px;
   width: 200px;
@@ -58,19 +59,19 @@ input:checked ~ div .hand {
 .hand > div {
   position: absolute;
   box-sizing: border-box;
-  border: 2px solid black;
+  border: 1px solid black;
   background: rgb(233, 209, 179);;
   transition: all 0.1s;
 }
-
+/* Drawing the fist */
 .fist {
   height: 110px;
   left: 40px;
   top: 50px;
   width: 90px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 30px 0 0 30px;
 }
-
+/* Drawing the fingers */
 .finger {
   width: 70px;
   height: 30px;
@@ -92,17 +93,18 @@ div.thumb {
   top: 50px;
   left: 80px;
   border-left: 0 solid;
-  box-shadow: -17px 6px 0 -15px black;
+  box-shadow: -17px 6px 0 -16px black;
+  transform-origin: 50% 10%;
 }
-
+/* Drawing the arm */
 div.arm {
   width: 22px;
   height: 70px;
   left: 20px;
   top: 70px;
   border: 0;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #user-hand {
@@ -117,6 +119,7 @@ input[type="radio"] {
   left: -1000in;
 }
 
+/* scissors move */
 input[id$="scissors"]:checked ~ div #user-hand .finger-1,
 input[id^="scissors"]:checked ~ div #computer-hand .finger-1 {
   width: 130px;
@@ -129,12 +132,14 @@ input[id^="scissors"]:checked ~ div #computer-hand .finger-2 {
   transform:rotate(5deg);
 }
 
+/* Paper move */
 input[id$="paper"]:checked ~ div #user-hand .finger-1,
 input[id^="paper"]:checked ~ div #computer-hand .finger-1{
   left: 124px;
   width: 80px;
   border-left: 0;
   border-radius: 0 20px 20px 0;
+  transform:rotate(-5deg);
 }
 input[id$="paper"]:checked ~ div #user-hand .finger-2,
 input[id^="paper"]:checked ~ div #computer-hand .finger-2{
@@ -142,6 +147,7 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-2{
   width: 80px;
   border-left: 0;
   border-radius: 0 20px 20px 0;
+  transform:rotate(5deg);
 }
 input[id$="paper"]:checked ~ div #user-hand .finger-3,
 input[id^="paper"]:checked ~ div #computer-hand .finger-3{
@@ -149,6 +155,7 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-3{
   width: 80px;
   border-left: 0;
   border-radius: 0 20px 20px 0;
+  transform:rotate(10deg);
 }
 input[id$="paper"]:checked ~ div #user-hand .finger-4,
 input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
@@ -156,7 +163,18 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
   width: 80px;
   border-left: 0;
   border-radius: 0 20px 20px 0;
+  transform:rotate(15deg);
 }
+
+input[id$="paper"]:checked ~ div #user-hand .thumb,
+input[id^="paper"]:checked ~ div #computer-hand .thumb{
+  left: 60px;
+  width: 30px;
+  border-top: 0;
+  border-radius: 15px 5px 20px 20px;
+  transform:rotate(-135deg);
+}
+/* Game result */
 #rock-rock:checked ~ div #gameover,
 #paper-paper:checked ~ div #gameover,
 #scissors-scissors:checked ~ div #gameover {
@@ -231,23 +249,6 @@ input:checked ~ div h3{
   position: relative;
 }
 
-
-label:active {
-  position:static; 
-  margin-left: 60px;
-}
-
-label:active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  z-index: 10;
-  height: 60px;
-}
-
-
 label {
   animation: changeOrder 0.45s infinite linear;
   background: transparent;
@@ -261,11 +262,24 @@ label {
   left: 0;
   user-select: none;
 }
-
+label:active {
+  position:static; 
+  margin-left: 60px;
+}
+label:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  z-index: 10;
+  height: 60px;
+}
 label:nth-of-type(1) { animation-delay: -0.00s; }
 label:nth-of-type(2) { animation-delay: -0.15s; }
 label:nth-of-type(3) { animation-delay: -0.30s; }
 
+/* Playing another round */
 input[type="reset"] {
   position: relative;
   bottom: 40px;
